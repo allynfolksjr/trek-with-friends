@@ -10,7 +10,7 @@ gem 'pg'
 gem 'haml-rails'
 
 # styles 4 teh lazy
-gem 'zurb-foundation'
+gem 'foundation-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -43,10 +43,10 @@ group :development do
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'awesome_print'
+  gem 'rspec-rails'
 end
 
 group :test do
-  gem 'rspec'
   gem 'rspec-rails'
   gem 'cucumber-rails'
   gem 'capybara'
