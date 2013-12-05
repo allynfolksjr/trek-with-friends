@@ -9,6 +9,9 @@ gem 'pg'
 # HAML
 gem 'haml-rails'
 
+# fixin' them sprockets
+gem 'sprockets_better_errors'
+
 # styles 4 teh lazy
 gem 'foundation-rails'
 
