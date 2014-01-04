@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
+gem 'rails', '4.0.2'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
@@ -11,6 +11,7 @@ gem 'haml-rails'
 
 # fixin' them sprockets
 gem 'sprockets_better_errors'
+
 
 # styles 4 teh lazy
 gem 'foundation-rails'
@@ -42,11 +43,16 @@ group :doc do
 end
 
 group :development do
+  # reload all the things
+  gem 'guard-livereload', require: false
+  gem 'guard'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'awesome_print'
   gem 'rspec-rails'
+  gem 'rack-mini-profiler'
+  gem 'bullet'
 end
 
 group :test do
