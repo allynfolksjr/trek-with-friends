@@ -30,5 +30,16 @@
                 %a{href: "#"} Episodes
               %li
                 %a{:href => "#"} Groups
-    = yield
+    .section
+      .row
+        = yield
+
+  .footer
+    .row
+      .column.arge-12
+        %p
+          %small
+            Created by <a href="https://github.com/allynfolksjr">Nikky Southerland</a>.
+            Trek With Friends is not endorsed, sponsored, or affiliated with CBS Studios Inc. or the "Star Trek" franchise.
+
     = javascript_include_tag "application"
