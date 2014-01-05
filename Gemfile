@@ -50,7 +50,6 @@ group :development do
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'awesome_print'
-  gem 'rspec-rails'
   gem 'rack-mini-profiler'
   gem 'bullet'
 end
