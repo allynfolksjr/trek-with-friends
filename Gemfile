@@ -12,6 +12,8 @@ gem 'haml-rails'
 # fixin' them sprockets
 gem 'sprockets_better_errors'
 
+# openmoviedb stuff
+gem 'themoviedb'
 
 # styles 4 teh lazy
 gem 'foundation-rails'
