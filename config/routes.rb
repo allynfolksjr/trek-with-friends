@@ -1,10 +1,17 @@
 TrekWithFriends::Application.routes.draw do
-  get "episode/index"
-  get "episode/show"
-  get "season/index"
-  get "season/show"
-  get "series/index"
-  get "series/show"
+
+  resources :series, only: [:index, :show] do
+    resources :season, only: [:index, :show]
+  end
+
+  resources :episodes, only: [:index, :show]
+
+  # get "episodes", to: "episode#index"
+  # get "episodes/:id", to: "episode#show"
+  # get "seasons", to: "season#index"
+  # get "seasons/:id", to: "season#show"
+  # get "series", to: "series#index"
+  # get "series/:id", to: "series#show"
   get "static/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
