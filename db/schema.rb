@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140111192208) do
+ActiveRecord::Schema.define(version: 20140112220619) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,31 +19,31 @@ ActiveRecord::Schema.define(version: 20140111192208) do
   create_table "episodes", force: true do |t|
     t.integer  "season_id"
     t.string   "title"
-    t.string   "description"
     t.integer  "series_sequence"
     t.integer  "season_sequence"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "description"
   end
 
   add_index "episodes", ["season_id"], name: "index_episodes_on_season_id", using: :btree
 
   create_table "seasons", force: true do |t|
     t.integer  "series_id"
-    t.string   "description"
     t.integer  "season_number"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "description"
   end
 
   add_index "seasons", ["series_id"], name: "index_seasons_on_series_id", using: :btree
 
   create_table "series", force: true do |t|
     t.string   "name"
-    t.string   "description"
     t.string   "series_sequence"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "description"
   end
 
 end

@@ -1,4 +1,4 @@
 class Episode < ActiveRecord::Base
   belongs_to :season
-  belongs_to :series, through: :season
+  has_one :series, through: :season
 end
