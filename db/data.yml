@@ -1,0 +1,13 @@
+
+---
+episodes:
+  columns:
+  - id
+  - season_id
+  - title
+  - series_sequence
+  - season_sequence
+  - created_at
+  - updated_at
+  - description
+  records: 
