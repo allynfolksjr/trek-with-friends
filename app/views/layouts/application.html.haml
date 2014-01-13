@@ -25,11 +25,9 @@
             %a{href: "#"} Explore
             %ul.dropdown
               %li
-                %a{:href => "/"} Series
+                %a{:href => "#{series_index_path}"} Series
               %li
-                %a{href: "#"} Episodes
-              %li
-                %a{:href => "#"} Groups
+                %a{href: "#{episode_index_path}"} Episodes
     .section.main-content
       .row
         = yield

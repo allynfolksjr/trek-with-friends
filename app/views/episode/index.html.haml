@@ -1,2 +1,3 @@
-%h1 Episode#index
-%p Find me in app/views/episode/index.html.haml
+%h1 Random Episode
+%p
+  %a{:href => "#{episode_path(@episode)}"} #{@episode.title}
