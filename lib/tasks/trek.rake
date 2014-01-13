@@ -9,7 +9,7 @@ namespace :trek do
         season_data = Tmdb::Season.detail(series.id, season_number+1)
         season = trek_series.seasons.create({season_number: season_number+1})
         season_data["episodes"].each do |e|
-          season.episodes.create({title: e["name"], series_sequence: e["episode_number"], description: e["overview"]})
+          season.episodes.create!({title: e["name"], season_sequence: e["episode_number"], description: e["overview"]})
         end
       end
     end

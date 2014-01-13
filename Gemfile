@@ -62,7 +62,7 @@ end
 group :test do
   gem 'rspec'
   gem 'rspec-rails'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', require: false
   gem 'capybara'
 end
 

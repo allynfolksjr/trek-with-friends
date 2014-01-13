@@ -4,7 +4,8 @@
   %h2 Season #{season.season_number}
   %p #{season.episodes.count} episodes
   - season.episodes.each do |e|
-    %h3 #{e.title}
+    %h4 #{e.title}
     %p
       #{truncate(e.description, length: 140, seperator: ' ')}
+    %p
       %a{:href => "#{episode_path(e)}"} View Episode
