@@ -1,11 +1,12 @@
-%h1 #{@series.name}
-%p This Star Trek Series has #{@seasons.count} seasons
-- @seasons.each do |season|
-  %h2 Season #{season.season_number}
-  %p #{season.episodes.count} episodes
-  - season.episodes.each do |e|
-    %h4 #{e.title}
-    %p
-      #{truncate(e.description, length: 140, seperator: ' ')}
-    %p
-      %a{:href => "#{episode_path(e)}"} View Episode
+- cache @series do
+  %h1 #{@series.name}
+  %p This Star Trek Series has #{@seasons.count} seasons
+  - @seasons.each do |season|
+    %h2 Season #{season.season_number}
+    %p #{season.episodes.count} episodes
+    - season.episodes.each do |e|
+      %h4 #{e.title}
+      %p
+        #{truncate(e.description, length: 140, seperator: ' ')}
+      %p
+        %a{:href => "#{episode_path(e)}"} View Episode
