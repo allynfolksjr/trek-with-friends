@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+- 2.0.0
+- 2.1.0
+deploy:
+  api_key:
+    secure: A2fbNlenVQ9BPCWdhMAwhj/6zeqhjWkNBbD9OVo0xXZut8YCnP+BGMvisfKcyBBzJWZ9tXEl5F2ZVmK3irL96GKSeO4oz4M2P094JlHD0nad9+3bpU2cQGiM+TEVza5mELNLO17n0AakmS5uCqAfdiabm0gTy8I0OmFkXF3PjA4=
+  provider: heroku
+  app: trek-with-friends

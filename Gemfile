@@ -56,6 +56,7 @@ group :development do
   gem 'awesome_print'
   gem 'rack-mini-profiler'
   gem 'bullet'
+  gem 'travis'
 end
 
 group :test do
