@@ -19,8 +19,15 @@
       %section.top-bar-section
         / Right Nav Section
         %ul.right
-          %li
-            %a{href: "#"} My Account
+          - if current_user
+            %li
+              =link_to current_user.name, root_path
+            %li
+              =link_to "Sign out", signout_path
+
+          - else
+            %li
+              =link_to "Sign In", '/auth/google_oauth2'
           %li.has-dropdown
             %a{href: "#"} Explore
             %ul.dropdown
