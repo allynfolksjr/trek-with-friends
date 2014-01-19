@@ -6,6 +6,9 @@ TrekWithFriends::Application.routes.draw do
 
   resources :episode, only: [:show, :index]
 
+  get '/auth/google_oauth2/callback', to: 'sessions#create', as: 'oauth2_callback'
+  get 'signout', to: 'sessions#destroy', as: 'signout'
+
   # get "episodes", to: "episode#index"
   # get "episodes/:id", to: "episode#show"
   # get "seasons", to: "season#index"

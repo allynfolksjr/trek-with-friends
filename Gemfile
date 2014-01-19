@@ -6,6 +6,9 @@ gem 'rails', '4.0.2'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
+# External auth with google
+gem "omniauth-google-oauth2"
+
 # HAML
 gem 'haml-rails'
 
