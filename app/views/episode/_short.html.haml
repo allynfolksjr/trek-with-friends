@@ -1,0 +1,5 @@
+%h4 #{episode.title}
+%p
+  #{truncate(episode.description, length: 140, seperator: ' ')}
+%p
+  %a{:href => "#{episode_path(episode)}"} View Episode

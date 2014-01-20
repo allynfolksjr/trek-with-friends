@@ -1,2 +1,3 @@
-%h1 Season#show
-%p Find me in app/views/season/show.html.haml
+%h1 Season #{@season.season_number}
+%p= link_to(@series.name,series_path(@series))
+=render partial: 'episode/short', collection: @episodes, as: :episode

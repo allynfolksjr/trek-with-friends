@@ -4,5 +4,7 @@ class SeriesController < ApplicationController
   end
 
   def show
+    @series = Series.includes([:seasons]).find(params[:id])
+    @seasons = @series.seasons
   end
 end
