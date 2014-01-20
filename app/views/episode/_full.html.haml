@@ -1,0 +1,6 @@
+%h1 #{episode.title}
+%h2
+  #{link_to(@series.name,series_path(@series))} /
+  #{link_to("Season #{@season.season_number}",series_season_path(@series,@season))} /
+  Episode #{episode.season_sequence}
+%p #{simple_format(episode.description)}

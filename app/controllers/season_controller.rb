@@ -5,5 +5,8 @@ class SeasonController < ApplicationController
   end
 
   def show
+    @series = Series.find params[:series_id]
+    @season = Season.includes([:episodes]).find(params[:id])
+    @episodes = @season.episodes
   end
 end

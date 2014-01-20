@@ -1,2 +1,8 @@
-%h1 Series#show
-%p Find me in app/views/series/show.html.haml
+%h1
+  =@series.name
+%p
+  =simple_format(@series.description)
+%h2 Cast
+%h2 Seasons
+-@seasons.each do |season|
+  %h4= link_to "Season #{season.season_number}", series_season_path(@series, season)

@@ -1,4 +1,1 @@
-- cache @episode do
-  %h1 #{@episode.title}
-  %h2 #{@series.name} / Season #{@season.season_number} / Episode #{@episode.season_sequence} in season
-  %p #{simple_format(@episode.description)}
+= render partial: 'full', locals: {episode: @episode}

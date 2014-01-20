@@ -2,6 +2,6 @@
 - @series.each do |s|
   - cache s do
     %h2= s.name
-    %p= s.description
+    %p= simple_format(s.description)
     %p
-      %a{:href => "#{series_season_index_path(s)}"} View Seasons
+      %a{:href => "#{series_path(s)}"} View Series Information

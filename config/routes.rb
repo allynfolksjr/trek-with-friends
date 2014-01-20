@@ -1,7 +1,8 @@
 TrekWithFriends::Application.routes.draw do
 
   resources :series, only: [:index, :show] do
-    resources :season, only: [:index, :show]
+    resources :season, only: [:show]
+    get 'seasons', to: 'season#index', as: 'season_index'
   end
 
   resources :episode, only: [:show, :index]
